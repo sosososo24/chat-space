@@ -6,16 +6,18 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has_many :message
+- has_many :messages
 - has_many :groups, through: groups_users
+- has_many :groups_users
 
 ## groupsテーブル
 |Colum|Type|Options|
 |-----|----|-------|
-|groupname|sting|null: false|
+|groupname|string|null: false|
 ### Association
-- has_many :message
+- has_many :messages
 - has_many :users, through: groups_users
+- has_many :groups_users
 
 ## groups_usersテーブル
 |Colum|Type|Options|
@@ -23,8 +25,8 @@
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false,foreign_key: true|
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 ## messageテーブル
 |Colum|Type|Options|
@@ -34,5 +36,5 @@
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false,foreign_key: true|
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
