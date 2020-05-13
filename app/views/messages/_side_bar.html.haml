@@ -2,12 +2,12 @@
   .chat-side__side-header
     .chat-side__side-header__box
       %p.chat-side__side-header__box__user-name
-        suzuki
+        = current_user.name
       %ul.chat-side__side-header__box__btn
         = link_to "#", class: "chat-side__side-header__box__btn" do
           = icon('far', 'edit', class: "chat-side__side-header__box__btn--icon")
           %span<>
-        = link_to "#", class: "chat-side__side-header__box__btn" do
+        = link_to edit_user_path(current_user), class: "chat-side__side-header__box__btn" do
           = icon('fa', 'cog',)
   .chat-side__groups
     .chat-side__groups__group
