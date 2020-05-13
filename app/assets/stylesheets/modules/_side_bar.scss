@@ -37,17 +37,20 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px 20px 0;
-        &__group {
-          color: #ffffff;
-          align-items: center;
-          padding-bottom: 40px;
-          &__group-name {
-            font-size: 15px;
-            padding-bottom: 5px;
+      &__group {
+        align-items: center;
+        padding-bottom: 40px;
+          &__group-link {
+            color: #ffffff;
+            text-decoration: none;
           }
-          &__latest-message {
-            font-size: 11px;
-          }
-        }
+            &__group-name {
+              font-size: 15px;
+              padding-bottom: 5px;
+            }
+            &__latest-message {
+              font-size: 11px;
+            }
+      }
     }
 }
